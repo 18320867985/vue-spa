@@ -1,4 +1,4 @@
-# my-project
+# vue-spa
 
 ## Project setup
 ```
