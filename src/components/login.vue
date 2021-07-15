@@ -4,7 +4,7 @@
 		<header class="login-hd ">
 		    <div class="ctr">
 		        <!--左边logo-->
-		        <h1 class="login-hd-logo  ">
+		        <h1 class="login-hd-logo ">
 		            <a href="../index/">
 		                <img src="../assets/logo.png" alt="home logo" />
 		                <span>
@@ -80,24 +80,16 @@
 		                            <p class="login-error d-hide">~手机验证码录失败~</p>
 		                            <div class="__item ">
 		                                <input class="phone" type="text" name="name"  maxlength="11"  placeholder="输入已验证的手机号"
-		               
 		                                autocomplete="off" />
-		                                 <!-- 非空提示-->
-		                                <span class="vd-req"></span>
-		                                <span class="vd-pattern"></span>
-		                                <span class="vd-remote"></span>
-		                            
+		                              
 		                            </div>
 		
 		                            <div class="__item __yzm vd-box">
-		                                <a class="__yzm-btn" href="#">获取验证码</a>
+		                                <a class="__yzm-btn">获取验证码</a>
 		                                <div class="bfc">
-		                                    <input class="vd-item" type="text"  placeholder="输入手机验证码" autocomplete="off" />
-		                                 <span class="vd-req"></span>
-		                                 <span class="vd-pattern"></span>
+		                                    <input class="" type="text"  placeholder="输入手机验证码" autocomplete="off" />		                                
 		                                </div>
-		                              
-		
+		                            
 		                            </div>
 		
 		                            <div class="__item bfc">
@@ -127,13 +119,13 @@
 		
 		                    <ul class="clearfix cont">
 		                        <li class="init" data-bg="#2d50d1">
-		                            <a href="#">
+		                            <a >
 		                                <img class="_fade-img" src="../assets/login-1.png" alt="登录大图" />
 		                            </a>
 		                        </li>
 		
 		                        <li data-bg="#4439c3">
-		                            <a href="#">
+		                            <a>
 		
 		                                <img class="_fade-img" src="../assets/login-2.png" alt="登录大图" />
 		

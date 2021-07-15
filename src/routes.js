@@ -7,8 +7,14 @@ import Container from "./components/container.vue"
 import Btn from "./components/btn.vue"
 import Icon from "./components/icon.vue"
 import Link from "./components/link.vue"
+
 import Radio from "./components/radio.vue"
 import Checkbox from "./components/checkbox.vue"
+import Input from "./components/input.vue"
+import Number from "./components/number.vue"
+import Select from "./components/select.vue"
+import Switch from "./components/switch.vue"
+import TimePicker from "./components/timePicker.vue"
 
 import Login from "./components/login.vue"
 
@@ -40,6 +46,24 @@ export const routes = [
 		
 		},
 		{ path:"/checkbox",component: Checkbox
+		
+		},
+		{ path:"/input",component: Input
+		
+		},
+
+		{ path:"/number",component: Number
+		
+		},
+		
+		{ path:"/select",component: Select
+		
+		},
+		{ path:"/switch",component: Switch
+		
+		},
+		
+		{ path:"/timePicker",component: TimePicker
 		
 		}
 	]

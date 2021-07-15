@@ -641,207 +641,208 @@ h6,
 
 
 /*======================================  bootstrap ui开发的扩展 =================================================*/
-.container-fluid-12 {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    min-width: 1170px;
-}
 
-.container-12 .row {
-    margin-right: -15px;
-    margin-left: -15px;
-}
+// .container-fluid-12 {
+//     width: 100%;
+//     margin-right: auto;
+//     margin-left: auto;
+//     padding-left: 15px;
+//     padding-right: 15px;
+//     min-width: 1170px;
+// }
 
-.container-fluid-12 .row {
-    margin-right: -15px;
-    margin-left: -15px;
-}
+// .container-12 .row {
+//     margin-right: -15px;
+//     margin-left: -15px;
+// }
 
-.container {
-    min-width: 300px;
-}
+// .container-fluid-12 .row {
+//     margin-right: -15px;
+//     margin-left: -15px;
+// }
 
-/*select兼容safari */
+// .container {
+//     min-width: 300px;
+// }
 
-select.form-control {
-    line-height: 28px;
-}
+// /*select兼容safari */
 
-/*modal ie8*/
-.no-opacity .modal {
-    width: 600px;
-    margin: 0 auto;
-}
+// select.form-control {
+//     line-height: 28px;
+// }
 
-
-/*颜色*/
-
-.text-white {
-    color: #fff;
-}
-
-.bg-white {
-    background: #fff;
-}
-
-/*边框与背景*/
-
-.rd {
-    border-radius: 5px;
-}
-
-.rd-no {
-    border-radius: 0px;
-}
-
-.rd-no2 {
-    border-radius: 0px !important;
-}
-
-.br-no {
-    border: none;
-}
-
-.br-no2 {
-    border: none !important;
-}
-
-.bg-no {
-    background: none;
-}
-
-.bg-no2 {
-    background: none !important;
-}
+// /*modal ie8*/
+// .no-opacity .modal {
+//     width: 600px;
+//     margin: 0 auto;
+// }
 
 
+// /*颜色*/
 
-/*input*/
+// .text-white {
+//     color: #fff;
+// }
 
-input,
-.btn {
-    outline: none;
-}
+// .bg-white {
+//     background: #fff;
+// }
 
-input:focus,
-.btn:focus {
-    outline: none !important;
-}
+// /*边框与背景*/
 
-.input-underline {
-    border-top: none !important;
-    border-left: none !important;
-    border-right: none !important;
-    box-shadow: 0px 0px 0px #fff, 0px 0px 0px #fff !important;
-}
+// .rd {
+//     border-radius: 5px;
+// }
 
-.input-underline:focus {
-    border-top: none !important;
-    border-left: none !important;
-    border-right: none !important;
-    box-shadow: 0px 0px 0px #fff, 0px 0px 0px #fff !important;
-}
+// .rd-no {
+//     border-radius: 0px;
+// }
 
-.input-br-no {
-    border: none !important;
-    box-shadow: 0px 0px 0px #fff, 0px 0px 0px #fff !important;
-    background: none;
-}
+// .rd-no2 {
+//     border-radius: 0px !important;
+// }
 
-.input-br-no:focus {
-    border: none !important;
-    background: none;
-    box-shadow: 0px 0px 0px #fff, 0px 0px 0px #fff !important;
-}
+// .br-no {
+//     border: none;
+// }
 
-.input-xs-x {
-    line-height: 28px;
-    height: 28px;
-    padding: 2px 8px;
-    font-size: 12px;
-}
+// .br-no2 {
+//     border: none !important;
+// }
 
-.btn-xs-x {
-    line-height: 28px !important;
-    height: 28px !important;
-    padding: 0px 7px !important;
-    font-size: 12px !important;
-}
+// .bg-no {
+//     background: none;
+// }
+
+// .bg-no2 {
+//     background: none !important;
+// }
 
 
-.content-responsive img {
-    height: auto;
-    max-width: 100% !important;
-}
 
-// 用于大于1200屏幕的
-.img-100 {
-    width: 100%;
-    height: auto;
-}
+// /*input*/
 
-/*内联表单*/
-.container-12,
-.container-fluid-12 {
-    .form-inline .form-group {
-        display: inline-block;
-        margin-bottom: 0;
-        vertical-align: middle;
-    }
+// input,
+// .btn {
+//     outline: none;
+// }
 
-    .form-inline .form-control {
-        display: inline-block;
-        width: auto;
-        vertical-align: middle;
-    }
+// input:focus,
+// .btn:focus {
+//     outline: none !important;
+// }
 
-    .form-inline .form-control-static {
-        display: inline-block;
-    }
+// .input-underline {
+//     border-top: none !important;
+//     border-left: none !important;
+//     border-right: none !important;
+//     box-shadow: 0px 0px 0px #fff, 0px 0px 0px #fff !important;
+// }
 
-    .form-inline .input-group {
-        display: inline-table;
-        vertical-align: middle;
-    }
+// .input-underline:focus {
+//     border-top: none !important;
+//     border-left: none !important;
+//     border-right: none !important;
+//     box-shadow: 0px 0px 0px #fff, 0px 0px 0px #fff !important;
+// }
 
-    .form-inline .input-group .input-group-addon,
-    .form-inline .input-group .input-group-btn,
-    .form-inline .input-group .form-control {
-        width: auto;
-    }
+// .input-br-no {
+//     border: none !important;
+//     box-shadow: 0px 0px 0px #fff, 0px 0px 0px #fff !important;
+//     background: none;
+// }
 
-    .form-inline .input-group > .form-control {
-        width: 100%;
-    }
+// .input-br-no:focus {
+//     border: none !important;
+//     background: none;
+//     box-shadow: 0px 0px 0px #fff, 0px 0px 0px #fff !important;
+// }
 
-    .form-inline .control-label {
-        margin-bottom: 0;
-        vertical-align: middle;
-    }
+// .input-xs-x {
+//     line-height: 28px;
+//     height: 28px;
+//     padding: 2px 8px;
+//     font-size: 12px;
+// }
 
-    .form-inline .radio,
-    .form-inline .checkbox {
-        display: inline-block;
-        margin-top: 0;
-        margin-bottom: 0;
-        vertical-align: middle;
-    }
+// .btn-xs-x {
+//     line-height: 28px !important;
+//     height: 28px !important;
+//     padding: 0px 7px !important;
+//     font-size: 12px !important;
+// }
 
-    .form-inline .radio label,
-    .form-inline .checkbox label {
-        padding-left: 0;
-    }
 
-    .form-inline .radio input[type="radio"],
-    .form-inline .checkbox input[type="checkbox"] {
-        position: relative;
-        margin-left: 0;
-    }
+// .content-responsive img {
+//     height: auto;
+//     max-width: 100% !important;
+// }
 
-    .form-inline .has-feedback .form-control-feedback {
-        top: 0;
-    }
-}
+// // 用于大于1200屏幕的
+// .img-100 {
+//     width: 100%;
+//     height: auto;
+// }
+
+// /*内联表单*/
+// .container-12,
+// .container-fluid-12 {
+//     .form-inline .form-group {
+//         display: inline-block;
+//         margin-bottom: 0;
+//         vertical-align: middle;
+//     }
+
+//     .form-inline .form-control {
+//         display: inline-block;
+//         width: auto;
+//         vertical-align: middle;
+//     }
+
+//     .form-inline .form-control-static {
+//         display: inline-block;
+//     }
+
+//     .form-inline .input-group {
+//         display: inline-table;
+//         vertical-align: middle;
+//     }
+
+//     .form-inline .input-group .input-group-addon,
+//     .form-inline .input-group .input-group-btn,
+//     .form-inline .input-group .form-control {
+//         width: auto;
+//     }
+
+//     .form-inline .input-group > .form-control {
+//         width: 100%;
+//     }
+
+//     .form-inline .control-label {
+//         margin-bottom: 0;
+//         vertical-align: middle;
+//     }
+
+//     .form-inline .radio,
+//     .form-inline .checkbox {
+//         display: inline-block;
+//         margin-top: 0;
+//         margin-bottom: 0;
+//         vertical-align: middle;
+//     }
+
+//     .form-inline .radio label,
+//     .form-inline .checkbox label {
+//         padding-left: 0;
+//     }
+
+//     .form-inline .radio input[type="radio"],
+//     .form-inline .checkbox input[type="checkbox"] {
+//         position: relative;
+//         margin-left: 0;
+//     }
+
+//     .form-inline .has-feedback .form-control-feedback {
+//         top: 0;
+//     }
+// }

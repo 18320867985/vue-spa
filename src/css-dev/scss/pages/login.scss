@@ -115,10 +115,6 @@
         }
     }
 
-
-
-
-
     .banner-wrap .cnt li a img {
         width: 100%;
         height: 100%;
@@ -335,6 +331,12 @@
                 font-size: 14px;
                 line-height: 20px;
                 border: 1px solid $line-blod;
+				box-shadow: inset 0 1px 1px rgba(0, 0, 0 ,.075);
+				
+				&:focus{
+					border: 1px solid $text-primary !important;	
+					
+				}
             }
 
             + .__item {
