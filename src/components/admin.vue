@@ -11,7 +11,8 @@
 			<el-container class="index-cnt">
 				<div class="index-aside">
 					<el-aside>
-						<el-menu :default-openeds="['1']">
+						<el-menu   @open="handleOpen"  
+      @close="handleClose">
 							<el-submenu index="1">
 								<template slot="title"><i class="el-icon-message"></i>组件-Basic </template>
 								<el-menu-item-group>
@@ -20,6 +21,7 @@
 										active-class="is-active " tag="li" exact>
 										Layout布局
 									</router-link>
+									
 									<router-link index="1-1" class="el-menu-item" to="/container"
 										active-class="is-active " tag="li" >
 										布局容器
@@ -30,10 +32,12 @@
 										active-class="is-active " tag="li" >
 										按钮
 									</router-link>
+									
 									<router-link index="1-1" class=" el-menu-item" to="/icon"
 										active-class="is-active " tag="li" >
 										Icon 图标
 									</router-link>
+									
 									<router-link index="1-1" class=" el-menu-item" to="/link"
 										active-class="is-active " tag="li" >
 										Link 文字链接
@@ -45,24 +49,30 @@
 							<el-submenu index="2">
 								<template slot="title"><i class="el-icon-message"></i>组件-Form</template>
 								<el-menu-item-group>
-	
-									<el-menu-item index="1-1">选项1</el-menu-item>
-									<el-menu-item index="1-2">选项2</el-menu-item>
+									
+									<router-link index="2-1" class="el-menu-item" to="/radio"
+										active-class="is-active" tag="li" exact>
+										radio
+									</router-link>
+									
+									<router-link index="2-2" class="el-menu-item" to="/checkbox"
+										active-class="is-active" tag="li" exact>
+										checkbox
+									</router-link>
+									
 								</el-menu-item-group>
-								<el-menu-item-group title="分组2">
-									<el-menu-item index="1-3">选项3</el-menu-item>
-								</el-menu-item-group>
-	
+							
 							</el-submenu>
+							
 							<el-submenu index="3">
 								<template slot="title"><i class="el-icon-message"></i>组件-Data</template>
 								<el-menu-item-group>
 	
-									<el-menu-item index="1-1">选项1</el-menu-item>
-									<el-menu-item index="1-2">选项2</el-menu-item>
+									<el-menu-item index="3-1">选项1</el-menu-item>
+									<el-menu-item index="3-2">选项2</el-menu-item>
 								</el-menu-item-group>
 								<el-menu-item-group title="分组2">
-									<el-menu-item index="1-3">选项3</el-menu-item>
+									<el-menu-item index="3-3">选项3</el-menu-item>
 								</el-menu-item-group>
 	
 							</el-submenu>
@@ -92,6 +102,12 @@
 		methods:{
 			logout(){
 				this.$router.push("/login")
+			},
+			handleOpen(key, keyPath) {
+			  console.log(key, keyPath);
+			},
+			handleClose(key, keyPath) {
+			  console.log(key, keyPath);
 			}
 		},
 		

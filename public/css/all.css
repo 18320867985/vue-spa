@@ -61950,13 +61950,17 @@ html, body, #app {
           justify-content: space-between; }
 
 .index-aside {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   width: 13% !important;
   min-width: 140px;
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden; }
   .index-aside .el-aside {
-    width: auto !important; }
+    width: auto !important;
+    overflow: hidden; }
     .index-aside .el-aside a {
       display: block; }
   .index-aside .el-menu {

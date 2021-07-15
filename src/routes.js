@@ -7,6 +7,8 @@ import Container from "./components/container.vue"
 import Btn from "./components/btn.vue"
 import Icon from "./components/icon.vue"
 import Link from "./components/link.vue"
+import Radio from "./components/radio.vue"
+import Checkbox from "./components/checkbox.vue"
 
 import Login from "./components/login.vue"
 
@@ -31,6 +33,13 @@ export const routes = [
 		
 		},
 		{ path:"/link",component:Link
+		
+		},
+		
+		{ path:"/radio",component:Radio
+		
+		},
+		{ path:"/checkbox",component: Checkbox
 		
 		}
 	]

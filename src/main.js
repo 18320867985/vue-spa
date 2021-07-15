@@ -7,7 +7,14 @@ import {routes} from "./routes.js";
 
 Vue.use(ElementUI);
 Vue.use(VueRouter);
-const router = new VueRouter({routes,mode:"history"})
+const router = new VueRouter({
+	routes,
+	mode:"history",
+	scrollBehavior(){
+		return {y:0}
+		
+	},
+})
 
 Vue.config.productionTip = false
  

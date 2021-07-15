@@ -34,7 +34,7 @@ html,body,#app{
 	
 }
 .index-aside{
-	
+	flex: 0 0 auto;
 	width: 13% !important;
 	min-width: 140px;
 	height: 100%;
@@ -43,6 +43,7 @@ html,body,#app{
 	
 	.el-aside{
 	width: auto!important;
+	 overflow: hidden;
 		a{
 			display: block;
 		}
