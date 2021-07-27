@@ -6,15 +6,15 @@
 		        <!--左边logo-->
 		        <h1 class="login-hd-logo ">
 		            <a href="../index/">
-		                <img src="../assets/logo.png" alt="home logo" />
+		               <img src="../assets/logo.png" alt="home logo" />
 		                <span>
-		                    塑金在线
-		                    www.sujin1688.com
+		                   
+		                    www.xxxx.com
 		                </span>
 		
 		            </a>
 		            <span class="txt">
-		                欢迎登录
+		             结算中心-管理系统  <!-- 欢迎登录 -->
 		            </span>
 		
 		        </h1>
@@ -23,6 +23,7 @@
 		</header>
 		
 		<section class="login-cnt">
+			
 		    <div class="login-cnt-tip ">
 		        <p class="ctr">
 		            <span class="iconfont iconwarning"></span>依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！ 将更有利于保护您的个人隐私。
@@ -147,14 +148,14 @@
 		
 		<footer class="login-ft">
 		
-		  <!--  <ul class="login-ft-nav  ctr">
+		<!--   <ul class="login-ft-nav  ctr">
 		
 		        <li>
 		            <a href="../index" title="首页">首页</a>
 		        </li>
 		
 		        <li>
-		            <a href="../pricevs" title="塑金商城">塑金商城</a>
+		            <a href="../pricevs" title="商城">商城</a>
 		        </li>
 		
 		        <li>

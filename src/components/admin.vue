@@ -12,7 +12,7 @@
 			<div class="index-aside">
 				
 				<el-aside>
-					<el-menu @open="handleOpen" @close="handleClose">
+					<el-menu>
 						<el-submenu index="1">
 							<template slot="title"><i class="el-icon-message"></i>组件-Basic </template>
 							<el-menu-item-group>
@@ -22,13 +22,13 @@
 									Layout布局
 								</router-link>
 
-								<router-link index="1-2" class="el-menu-item" to="/container" active-class="is-active "
+								<router-link index="1-2" class="el-menu-item" to="/admin/container" active-class="is-active "
 									tag="li">
 									布局容器
 								</router-link>
 
 
-								<router-link index="1-3" class=" el-menu-item" to="/btn" active-class="is-active "
+								<router-link index="1-3" class=" el-menu-item" to="/admin/btn" active-class="is-active "
 									tag="li">
 									按钮
 								</router-link>
@@ -80,14 +80,22 @@
 									Switch 开关
 								</router-link>
 								
-								
 								<router-link index="2-7" class="el-menu-item" to="/timePicker" active-class="is-active"
 									tag="li" >
 									timePicker
 								</router-link>
 								
 								
-
+								<router-link index="2-8" class="el-menu-item" to="/datePicker" active-class="is-active"
+									tag="li" >
+									datePicker
+								</router-link>
+								
+								<router-link index="2-8" class="el-menu-item" to="/form" active-class="is-active"
+									tag="li" >
+									form 表单
+								</router-link>
+							
 							</el-menu-item-group>
 
 						</el-submenu>
@@ -129,14 +137,9 @@
 		},
 		methods: {
 			logout() {
-				this.$router.push("/login")
+				this.$router.push("/")
 			},
-			handleOpen(key, keyPath) {
-				console.log(key, keyPath);
-			},
-			handleClose(key, keyPath) {
-				console.log(key, keyPath);
-			}
+			
 		},
 
 		mounted() {
