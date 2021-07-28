@@ -19,9 +19,9 @@ import admins from "./admin.js";
 	
 			
 		// 重定向
-		// { path:"*",redirect:"/"
+		{ path:"*",redirect:"/"
 		
-		// }
+		}
 	];
 
 import Vue from 'vue';

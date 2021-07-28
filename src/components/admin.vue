@@ -10,15 +10,14 @@
 		</el-header>
 		<el-container class="index-cnt">
 			<div class="index-aside">
-				
 				<el-aside>
 					<el-menu>
 						<el-submenu index="1">
 							<template slot="title"><i class="el-icon-message"></i>组件-Basic </template>
 							<el-menu-item-group>
 
-								<router-link index="1-1" class=" el-menu-item" to="/" active-class="is-active "
-									tag="li" exact>
+								<router-link index="1-1" class=" el-menu-item" to="/" active-class="is-active " tag="li"
+									exact>
 									Layout布局
 								</router-link>
 
@@ -51,51 +50,51 @@
 							<el-menu-item-group>
 
 								<router-link index="2-1" class="el-menu-item" to="/radio" active-class="is-active"
-									tag="li" >
+									tag="li">
 									radio
 								</router-link>
 
 								<router-link index="2-2" class="el-menu-item" to="/checkbox" active-class="is-active"
-									tag="li" >
+									tag="li">
 									checkbox
 								</router-link>
 
 								<router-link index="2-3" class="el-menu-item" to="/input" active-class="is-active"
-									tag="li" >
+									tag="li">
 									input输入框
 								</router-link>
 
 								<router-link index="2-4" class="el-menu-item" to="/number" active-class="is-active"
-									tag="li" >
+									tag="li">
 									inputNumber计数器
 								</router-link>
-								
+
 								<router-link index="2-5" class="el-menu-item" to="/select" active-class="is-active"
-									tag="li" >
+									tag="li">
 									select选择器
 								</router-link>
-								
+
 								<router-link index="2-6" class="el-menu-item" to="/switch" active-class="is-active"
-									tag="li" >
+									tag="li">
 									Switch 开关
 								</router-link>
-								
+
 								<router-link index="2-7" class="el-menu-item" to="/timePicker" active-class="is-active"
-									tag="li" >
+									tag="li">
 									timePicker
 								</router-link>
-								
-								
+
+
 								<router-link index="2-8" class="el-menu-item" to="/datePicker" active-class="is-active"
-									tag="li" >
+									tag="li">
 									datePicker
 								</router-link>
-								
+
 								<router-link index="2-8" class="el-menu-item" to="/form" active-class="is-active"
-									tag="li" >
+									tag="li">
 									form 表单
 								</router-link>
-							
+
 							</el-menu-item-group>
 
 						</el-submenu>
@@ -119,19 +118,16 @@
 
 			<div class="index-main">
 				<el-main>
-					<router-view></router-view>
-					<el-button type="text" @click="centerDialogVisible = true">点击打开 Dialog</el-button>
-					
-					<el-dialog
-					  title="提示"
-					  :visible.sync="centerDialogVisible"
-					  width="30%" size="small"
-					  >
-					  <span>确定退出登录?</span>
-					  <span slot="footer" class="dialog-footer">
-					    <el-button @click="centerDialogVisible = false">取 消</el-button>
-					    <el-button type="primary" @click="logout">确 定</el-button>
-					  </span>
+					<transition name="slide-fade">
+						<router-view></router-view>
+					</transition>
+
+					<el-dialog title="提示" :visible.sync="centerDialogVisible" width="30%" size="small">
+						<span>确定退出登录?</span>
+						<span slot="footer" class="dialog-footer">
+							<el-button @click="centerDialogVisible = false">取 消</el-button>
+							<el-button type="primary" @click="logout">确 定</el-button>
+						</span>
 					</el-dialog>
 				</el-main>
 			</div>
@@ -146,7 +142,7 @@
 		data() {
 			return {
 				admin: "admin",
-				centerDialogVisible:false
+				centerDialogVisible: false
 			}
 		},
 		methods: {
@@ -154,7 +150,7 @@
 				console.log("logout")
 				this.$router.push("/login")
 			},
-			
+
 		},
 
 		mounted() {
@@ -175,6 +171,16 @@
 	}
 </script>
 
-<style>
+<style scoped="scoped">
+	
+	.slide-fade-enter-active {
+		transition: all 1s ease;
+	}
 
+	.slide-fade-enter
+	{
+		transform:translate(10px);
+		filter: blur(2px) opacity(0);
+		
+	}
 </style>
