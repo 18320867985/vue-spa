@@ -5,10 +5,9 @@
 		    <div class="ctr">
 		        <!--左边logo-->
 		        <h1 class="login-hd-logo ">
-		            <a href="../index/">
+		            <a href="">
 		               <img src="../assets/logo.png" alt="home logo" />
-		                <span>
-		                   
+		                <span>	                   
 		                    www.xxxx.com
 		                </span>
 		
@@ -99,7 +98,7 @@
 		                            </div>
 		
 		                            <div class="__item">
-		                                <a class="__btn vd-btn" href="#">登录</a>
+		                                <a class="__btn vd-btn" href="#" @click="loginBtn">登录</a>
 		                            </div>
 		
 		                        </div>
@@ -201,18 +200,19 @@
 		methods:{
 			loginBtn(){
 			console.log(this.userName+this.password)
-				if(this.userName.trim()==="admin"&&this.password.trim()==="123456"){
-					this.$router.push("/admin")
-				}else{
-					let errMsg="";
-					if(this.password==""){errMsg="密码不能为空！";}
-					if(this.userName==""){errMsg="用户名不能为空！";}
-					if(this.password!=""&&this.userName!=""){errMsg="用户名与密码不匹配！";}
+			this.$router.push("/");
+				// if(this.userName.trim()==="admin"&&this.password.trim()==="123456"){
+				// 	this.$router.push("/");
+				// }else{
+				// 	let errMsg="";
+				// 	if(this.password==""){errMsg="密码不能为空！";}
+				// 	if(this.userName==""){errMsg="用户名不能为空！";}
+				// 	if(this.password!=""&&this.userName!=""){errMsg="用户名与密码不匹配！";}
 					
-					 this.$alert(errMsg, '账号登录', {
-					          confirmButtonText: '确定'	         
-					});
-				}
+				// 	 this.$alert(errMsg, '账号登录', {
+				// 	          confirmButtonText: '确定'	         
+				// 	});
+				// }
 			}
 		}
 	}

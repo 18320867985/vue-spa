@@ -7,6 +7,7 @@ import router from "./routes";
 import store from "./store"
 
 import App from './App.vue';
+//import admin from './components/admin.vue';
 Vue.config.productionTip = false
  
 new Vue({

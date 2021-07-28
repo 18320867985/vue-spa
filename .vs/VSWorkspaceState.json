@@ -2,10 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\css-dev",
     "\\src\\css-dev\\scss",
     "\\src\\css-dev\\scss\\pages"
   ],
-  "SelectedNode": "\\src\\css-dev\\scss\\pages\\_index.scss",
+  "SelectedNode": "\\src",
   "PreviewInSolutionExplorer": false
 }

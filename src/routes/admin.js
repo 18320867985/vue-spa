@@ -1,4 +1,3 @@
-import Admin from "../components/admin.vue"
 
 // basic
 import Layout from "../components/layout.vue"
@@ -18,12 +17,6 @@ import DatePicker from "../components/datePicker.vue"
 import Form from "../components/form.vue"
 
 export default [
-
-	{
-		path: "/admin",
-		component: Admin,
-		children: [
-
 			{
 				path: "",
 				component: Layout
@@ -31,12 +24,12 @@ export default [
 			},
 
 			{
-				path: "container",
+				path: "/container",
 				component: Container
 
 			},
 			{
-				path: "btn",
+				path: "/btn",
 				component: Btn
 
 			},
@@ -101,8 +94,4 @@ export default [
 				component: Form
 
 			}
-		]
-
-	}
-
-];
+		];

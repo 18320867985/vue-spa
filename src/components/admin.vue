@@ -3,9 +3,9 @@
 	<el-container class="index" ref="index">
 		<el-header class="index-h">
 			<div>
-				<div class="fr"> <a href="#" @click="logout">退出登录</a> </div>
+				<div class="fr"> <a href="#" @click="centerDialogVisible = true">退出登录</a> </div>
 				<img src="../assets/logo.png" alt="Alternate Text" />
-				Vue 开发和演示
+				结算中心-管理系统
 			</div>
 		</el-header>
 		<el-container class="index-cnt">
@@ -17,18 +17,18 @@
 							<template slot="title"><i class="el-icon-message"></i>组件-Basic </template>
 							<el-menu-item-group>
 
-								<router-link index="1-1" class=" el-menu-item" to="/admin" active-class="is-active "
+								<router-link index="1-1" class=" el-menu-item" to="/" active-class="is-active "
 									tag="li" exact>
 									Layout布局
 								</router-link>
 
-								<router-link index="1-2" class="el-menu-item" to="/admin/container" active-class="is-active "
+								<router-link index="1-2" class="el-menu-item" to="/container" active-class="is-active "
 									tag="li">
 									布局容器
 								</router-link>
 
 
-								<router-link index="1-3" class=" el-menu-item" to="/admin/btn" active-class="is-active "
+								<router-link index="1-3" class=" el-menu-item" to="/btn" active-class="is-active "
 									tag="li">
 									按钮
 								</router-link>
@@ -120,6 +120,19 @@
 			<div class="index-main">
 				<el-main>
 					<router-view></router-view>
+					<el-button type="text" @click="centerDialogVisible = true">点击打开 Dialog</el-button>
+					
+					<el-dialog
+					  title="提示"
+					  :visible.sync="centerDialogVisible"
+					  width="30%" size="small"
+					  >
+					  <span>确定退出登录?</span>
+					  <span slot="footer" class="dialog-footer">
+					    <el-button @click="centerDialogVisible = false">取 消</el-button>
+					    <el-button type="primary" @click="logout">确 定</el-button>
+					  </span>
+					</el-dialog>
 				</el-main>
 			</div>
 
@@ -132,12 +145,14 @@
 	export default {
 		data() {
 			return {
-				admin: "admin"
+				admin: "admin",
+				centerDialogVisible:false
 			}
 		},
 		methods: {
 			logout() {
-				this.$router.push("/")
+				console.log("logout")
+				this.$router.push("/login")
 			},
 			
 		},

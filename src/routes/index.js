@@ -1,19 +1,27 @@
-// 根模块
+// 根模块区
+import Admin from "../components/admin.vue"
 import Login from "../components/login.vue"
 
-// 子模块
+
+// 子模块区
 import admins from "./admin.js";
 
  const routes = [
+
 		{
-			path:"/",component:Login
+			path:"/",component:Admin,children:admins
 		},
-		...admins,
+		
+		{
+			path:"/login",component:Login
+		},
+		
+	
 			
 		// 重定向
-		{ path:"*",redirect:"/"
+		// { path:"*",redirect:"/"
 		
-		}
+		// }
 	];
 
 import Vue from 'vue';
