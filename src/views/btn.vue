@@ -208,6 +208,8 @@
 			return {
 			val:"elementUI dev "
 			}
+		},mounted(){
+	console.log(this.$router.options.routes)		
 		}
 	}
 </script>

@@ -1,97 +1,95 @@
-
 // basic
-import Layout from "../components/layout.vue"
-import Container from "../components/container.vue"
-import Btn from "../components/btn.vue"
-import Icon from "../components/icon.vue"
-import Link from "../components/link.vue"
+import Layout from "../views/layout.vue"
+import Container from "../views/container.vue"
+import Btn from "../views/btn.vue"
+import Icon from "../views/icon.vue"
+import Link from "../views/link.vue"
 
-import Radio from "../components/radio.vue"
-import Checkbox from "../components/checkbox.vue"
-import Input from "../components/input.vue"
-import Number from "../components/number.vue"
-import Select from "../components/select.vue"
-import Switch from "../components/switch.vue"
-import TimePicker from "../components/timePicker.vue"
-import DatePicker from "../components/datePicker.vue"
-import Form from "../components/form.vue"
+import Radio from "../views/radio.vue"
+import Checkbox from "../views/checkbox.vue"
+import Input from "../views/input.vue"
+import Number from "../views/number.vue"
+import Select from "../views/select.vue"
+import Switch from "../views/switch.vue"
+import TimePicker from "../views/timePicker.vue"
+import DatePicker from "../views/datePicker.vue"
+import Form from "../views/form.vue"
 
-export default [
-			{
-				path: "",
-				component: Layout
+export default [{
+		path: "",
+		component: Layout
 
-			},
+	},
 
-			{
-				path: "/container",
-				component: Container
+	{
+		path: "/container",
+		component: Container
 
-			},
-			{
-				path: "/btn",
-				component: Btn
+	},
+	{
+		path: "/btn",
+		component: Btn
 
-			},
-			{
-				path: "/icon",
-				component: Icon
+	},
+	{
+		path: "/icon",
+		component: Icon
 
-			},
-			{
-				path: "/link",
-				component: Link
+	},
+	{
+		path: "/link",
+		component: Link
 
-			},
+	},
 
-			{
-				path: "/radio",
-				component: Radio
+	{
+		path: "/radio",
+		component: Radio
 
-			},
-			{
-				path: "/checkbox",
-				component: Checkbox
+	},
+	{
+		path: "/checkbox",
+		component: Checkbox
 
-			},
-			{
-				path: "/input",
-				component: Input
+	},
+	{
+		path: "/input",
+		component: Input
 
-			},
+	},
 
-			{
-				path: "/number",
-				component: Number
+	{
+		path: "/number",
+		component: Number
 
-			},
+	},
 
-			{
-				path: "/select",
-				component: Select
+	{
+		path: "/select",
+		component: Select
 
-			},
-			{
-				path: "/switch",
-				component: Switch
+	},
+	{
+		path: "/switch",
+		component: Switch
 
-			},
+	},
 
-			{
-				path: "/timePicker",
-				component: TimePicker
+	{
+		path: "/timePicker",
+		component: TimePicker
 
-			},
+	},
 
-			{
-				path: "/datePicker",
-				component: DatePicker
+	{
+		path: "/datePicker",
+		component: DatePicker
 
-			},
+	},
 
-			{
-				path: "/form",
-				component: Form
+	{
+		path: "/form",
+		component: Form
 
-			}
-		];
+	}
+];

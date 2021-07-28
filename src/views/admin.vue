@@ -3,17 +3,19 @@
 	<el-container class="index" ref="index">
 		<el-header class="index-h">
 			<div>
+				<i class="index-h-icon " @click="isCollapse=!isCollapse" :class="isCollapse?'el-icon-s-unfold ':'el-icon-s-fold'"></i>
 				<div class="fr"> <a href="#" @click="centerDialogVisible = true">退出登录</a> </div>
 				<img src="../assets/logo.png" alt="Alternate Text" />
-				结算中心-管理系统
+				结算中心-管理系统  
 			</div>
 		</el-header>
 		<el-container class="index-cnt">
-			<div class="index-aside">
-				<el-aside>
-					<el-menu>
-						<el-submenu index="1">
-							<template slot="title"><i class="el-icon-message"></i>组件-Basic </template>
+			<el-scrollbar wrap-class="scrollbar-wrapper" class="index-cnt-aside " :class="{'open':!isCollapse}">
+				<el-aside class="index-aside"  :class="{'open':!isCollapse}">
+					<el-menu  :collapse="isCollapse">
+						
+						<el-submenu index="1" >
+							<template slot="title"><i class="el-icon-message"></i>   <span slot="title">组件-Basic</span> </template>
 							<el-menu-item-group>
 
 								<router-link index="1-1" class=" el-menu-item" to="/" active-class="is-active " tag="li"
@@ -43,10 +45,10 @@
 								</router-link>
 
 							</el-menu-item-group>
-
 						</el-submenu>
+
 						<el-submenu index="2">
-							<template slot="title"><i class="el-icon-message"></i>组件-Form</template>
+							<template slot="title"><i class="el-icon-menu"></i>  <span slot="title">组件-Form</span></template>
 							<el-menu-item-group>
 
 								<router-link index="2-1" class="el-menu-item" to="/radio" active-class="is-active"
@@ -99,26 +101,13 @@
 
 						</el-submenu>
 
-						<el-submenu index="3">
-							<template slot="title"><i class="el-icon-message"></i>组件-Data</template>
-							<el-menu-item-group>
-
-								<el-menu-item index="3-1">选项1</el-menu-item>
-								<el-menu-item index="3-2">选项2</el-menu-item>
-							</el-menu-item-group>
-							<el-menu-item-group title="分组2">
-								<el-menu-item index="3-3">选项3</el-menu-item>
-							</el-menu-item-group>
-
-						</el-submenu>
-
 					</el-menu>
 				</el-aside>
-			</div>
-
+			</el-scrollbar>
 			<div class="index-main">
 				<el-main>
 					<transition name="slide-fade">
+						
 						<router-view></router-view>
 					</transition>
 
@@ -142,7 +131,8 @@
 		data() {
 			return {
 				admin: "admin",
-				centerDialogVisible: false
+				centerDialogVisible: false,
+				isCollapse:false
 			}
 		},
 		methods: {
@@ -172,15 +162,17 @@
 </script>
 
 <style scoped="scoped">
-	
 	.slide-fade-enter-active {
 		transition: all 1s ease;
 	}
 
-	.slide-fade-enter
-	{
-		transform:translate(10px);
-		filter: blur(2px) opacity(0);
-		
+	.slide-fade-enter {
+		transform: translate(20px);
+		filter: blur(10px) opacity(0);
+
+	}
+
+	..el-scrollbar__wrap {
+		background: red;
 	}
 </style>

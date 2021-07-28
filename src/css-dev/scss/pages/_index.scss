@@ -14,28 +14,55 @@ html,body,#app{
 	min-width: 1024px;	
 }
 .index-h{
-	line-height: 60px;
+	line-height: 50px;
+	height: 50px !important;
 	border-bottom: 1px solid #ddd;
 	font-size: 16px;
 	
 	img{
 		width: 30px;
-		max-height: 60px;
-		vertical-align: middle;
+		margin-left: 50px;
 		margin-right: 20px;
+		max-height: 50px;
+		vertical-align: middle;
+		
 	}
+}
+
+.index-h-icon{
+	 cursor: pointer;
+	 color:#333;
+	 
+	
 }
 .index-cnt{
 	flex: 1 0 0;
 	display: flex;
-	justify-content: space-between;
-	
-	
+	justify-content: space-between;	
+		
 }
-.index-aside{
+
+.index-cnt-aside.el-scrollbar{
+	
+	&.open{
+		width: 13% !important;
+		transition: all .5s ease;
+	}
 	flex: 0 0 auto;
-	width: 13% !important;
-	min-width: 140px;
+	
+			
+	.scrollbar-wrapper{
+		 overflow-x: hidden;
+	}
+}
+
+.index-aside{
+	transition: all .5s ease;
+	&.open{
+		min-width: 140px;
+	}
+	width: 100% !important;
+	
 	height: 100%;
 	overflow-y: auto;
 	overflow-x: hidden;
@@ -59,9 +86,7 @@ html,body,#app{
 	height: 100%;
 	overflow-y:auto;
 	background: #f8f8f8;
-	.el-main{
-		
-	}
+	
 }
 
 .index{
