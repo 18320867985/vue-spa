@@ -1,29 +1,47 @@
 // 根模块区
-import Admin from "../views/admin.vue"
+import Layout from "../layout/index.vue"
+import Home from "../views/home.vue"
 import Login from "../views/login.vue"
- import Layout from "../views/layout.vue"
 
 
 // 子模块区
-import admins from "./admin.js";
+import basic from "./basic.js";
+import form from "./form.js";
 
  const routes = [
 
 		{
 			path:"/",
-			component:Admin,
+			component:Layout,
 		//	redirect: '/basic',
-			children:admins
+			children:[
+				{
+					path:"",
+					component:Home
+				}
+			]
 		},
+		
 		
 		{
 			path:"/basic",
 			component:Layout,
-			redirect: '/basic',
-			//children:admins
+			redirect: '/basic/Layout',
+			children:basic
+			
+		},
+		
+		{
+			path:"/form",
+			component:Layout,
+			redirect: '/form/radio',
+			children:form
+			
 		},
 		{
-			path:"/login",component:Login
+			path:"/login",
+			component:Login,
+			
 		},
 		
 			

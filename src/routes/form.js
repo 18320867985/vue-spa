@@ -1,9 +1,4 @@
-// basic
-import Layout from "../views/layout.vue"
-import Container from "../views/container.vue"
-import Btn from "../views/btn.vue"
-import Icon from "../views/icon.vue"
-import Link from "../views/link.vue"
+
 
 import Radio from "../views/radio.vue"
 import Checkbox from "../views/checkbox.vue"
@@ -17,78 +12,58 @@ import Form from "../views/form.vue"
 
 export default [{
 		path: "",
-		component: Layout
+		component: Radio
 
 	},
 
+	
 	{
-		path: "/container",
-		component: Container
-
-	},
-	{
-		path: "/btn",
-		component: Btn
-
-	},
-	{
-		path: "/icon",
-		component: Icon
-
-	},
-	{
-		path: "/link",
-		component: Link
-
-	},
-
-	{
-		path: "/radio",
+		path: "radio",
 		component: Radio
 
 	},
 	{
-		path: "/checkbox",
+		path: "checkbox",
 		component: Checkbox
 
 	},
 	{
-		path: "/input",
+		path: "input",
 		component: Input
 
 	},
 
 	{
-		path: "/number",
+		path: "number",
 		component: Number
 
 	},
 
 	{
-		path: "/select",
+		path: "select",
 		component: Select
 
 	},
 	{
-		path: "/switch",
+		path: "switch",
 		component: Switch
 
 	},
 
 	{
-		path: "/timePicker",
+		path: "timePicker",
 		component: TimePicker
 
 	},
 
 	{
-		path: "/datePicker",
+		path: "datePicker",
 		component: DatePicker
 
 	},
 
 	{
-		path: "/form",
+		path: "form",
 		component: Form
 
 	}
