@@ -4,7 +4,9 @@
 		<el-header class="index-h">
 			<div>
 				<i class="index-h-icon " @click="isCollapse=!isCollapse" :class="isCollapse?'el-icon-s-unfold ':'el-icon-s-fold'"></i>
-				<div class="fr"> <a href="#" @click="centerDialogVisible = true">退出登录</a> </div>
+				<div class="fr">
+					  <el-button size="small" @click="centerDialogVisible = true"  round>退出登录</el-button>
+				</div>
 				<img src="../assets/logo.png" alt="Alternate Text" />
 				结算中心-管理系统  
 			</div>

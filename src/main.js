@@ -6,6 +6,9 @@ Vue.use(ElementUI);
 import router from "./routes";
 import store from "./store"
 
+import api from "./api/index.js";
+Vue.prototype.$api=api;
+
 import App from './App.vue';
 //import admin from './components/admin.vue';
 Vue.config.productionTip = false

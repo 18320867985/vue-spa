@@ -1,9 +1,9 @@
 // basic
-import Layout from "../views/layout.vue"
-import Container from "../views/container.vue"
-import Btn from "../views/btn.vue"
-import Icon from "../views/icon.vue"
-import Link from "../views/link.vue"
+import Layout from "../views/basic/layout.vue"
+import Container from "../views/basic/container.vue"
+import Btn from "../views/basic/btn.vue"
+import Icon from "../views/basic/icon.vue"
+import Link from "../views/basic/link.vue"
 
 
 export default [{

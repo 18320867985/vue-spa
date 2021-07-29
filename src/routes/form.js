@@ -1,14 +1,14 @@
 
 
-import Radio from "../views/radio.vue"
-import Checkbox from "../views/checkbox.vue"
-import Input from "../views/input.vue"
-import Number from "../views/number.vue"
-import Select from "../views/select.vue"
-import Switch from "../views/switch.vue"
-import TimePicker from "../views/timePicker.vue"
-import DatePicker from "../views/datePicker.vue"
-import Form from "../views/form.vue"
+import Radio from "../views/form/radio.vue"
+import Checkbox from "../views/form/checkbox.vue"
+import Input from "../views/form/input.vue"
+import Number from "../views/form/number.vue"
+import Select from "../views/form/select.vue"
+import Switch from "../views/form/switch.vue"
+import TimePicker from "../views/form/timePicker.vue"
+import DatePicker from "../views/form/datePicker.vue"
+import Form from "../views/form/form.vue"
 
 export default [{
 		path: "",

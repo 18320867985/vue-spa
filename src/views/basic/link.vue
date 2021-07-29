@@ -5,7 +5,7 @@
 
 		<h4>基础用法</h4>
 		<h6>基础的文字链接用法。</h6>
-		<el-link target="_blank"><router-link to="/btn" >默认链接</router-link> </el-link>
+		<el-link target="_blank">默认链接</el-link>
 		<el-link type="success">成功链接</el-link>
 		<el-link type="warning">警告链接</el-link>
 		<el-link type="danger">危险链接</el-link>
