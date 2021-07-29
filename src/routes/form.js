@@ -12,59 +12,64 @@ import Form from "../views/form.vue"
 
 export default [{
 		path: "",
-		component: Radio
+		component: Radio,
+		ttl:"表单 Radio",
 
 	},
 
-	
-	{
-		path: "radio",
-		component: Radio
-
-	},
 	{
 		path: "checkbox",
-		component: Checkbox
+		component: Checkbox,
+		ttl:"表单 checkbox",
+		
 
 	},
 	{
 		path: "input",
-		component: Input
+		component: Input,
+		ttl:"表单 input",
 
 	},
 
 	{
 		path: "number",
-		component: Number
+		component: Number,
+		ttl:"表单 number",
+		
 
 	},
 
 	{
 		path: "select",
-		component: Select
+		component: Select,
+		ttl:"表单 select",
 
 	},
 	{
 		path: "switch",
-		component: Switch
+		component: Switch,
+		ttl:"表单 switch",
 
 	},
 
 	{
 		path: "timePicker",
-		component: TimePicker
+		component: TimePicker,
+		ttl:"表单 timePicker",
 
 	},
 
 	{
 		path: "datePicker",
-		component: DatePicker
+		component: DatePicker,
+		ttl:"表单 datePicker",
 
 	},
 
 	{
 		path: "form",
-		component: Form
+		component: Form,
+		ttl:"表单 form",
 
 	}
 ];

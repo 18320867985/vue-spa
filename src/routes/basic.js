@@ -8,33 +8,33 @@ import Link from "../views/link.vue"
 
 export default [{
 		path: "",
-		component: Layout
+		component: Layout,
+		ttl:"组件-Basic",
 
 	},
-	{
-		path: "Layout",
-		component: Layout
 	
-	},
-
 	{
 		path: "container",
-		component: Container
+		component: Container,
+		ttl:"组件-container",
 
 	},
 	{
 		path: "btn",
-		component: Btn
+		component: Btn,
+		ttl:"组件-btn",
 
 	},
 	{
 		path: "icon",
-		component: Icon
+		component: Icon,
+		ttl:"组件-icon",
 
 	},
 	{
 		path: "link",
-		component: Link
+		component: Link,
+		ttl:"组件-link",
 
 	}
 	

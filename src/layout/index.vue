@@ -12,7 +12,26 @@
 		<el-container class="index-cnt">
 			<el-scrollbar wrap-class="scrollbar-wrapper" class="index-cnt-aside " :class="{'open':!isCollapse}">
 				<el-aside class="index-aside"  :class="{'open':!isCollapse}">
-					<el-menu  :collapse="isCollapse"   default-active="1">
+					<!--导航菜单-->
+					<el-menu :default-active="$route.path" :collapse="isCollapse" 
+					>
+							<el-submenu v-for="(item,index) in $router.options.routes" :index="index+''"  :key="index"  :hidden="item.hidden" >
+								<template slot="title"><i :class="item.icon"></i> <span slot="title">{{item.ttl}} </span> </template>
+								
+								<el-menu-item-group  >
+														
+									<router-link :index="index+'-'+index2" class=" el-menu-item" :to="child.path?item.path+'/'+child.path:item.path" active-class="is-active"  v-for="(child,index2) in item.children"  :key="child.path" tag="li"
+										exact>
+											{{child.ttl}}
+									</router-link>
+									
+								</el-menu-item-group>
+							
+							</el-submenu>
+						
+					</el-menu>
+				<!-- 	
+					<el-menu  :collapse="isCollapse"  :default-active="$route.path">
 						<el-submenu index="1" >
 							<template slot="title"><i class="el-icon-s-home"></i>   <span slot="title">首页</span> </template>
 							<el-menu-item-group>
@@ -112,6 +131,7 @@
 						</el-submenu>
 
 					</el-menu>
+				 -->
 				</el-aside>
 			</el-scrollbar>
 			<div class="index-main">
@@ -155,6 +175,7 @@
 
 		mounted() {
 
+console.log("$router.options.routes",this.$router.options.routes)
 			// 设置 iframe 高度
 			var $el = document.querySelector(".index");
 			resetWidth();
@@ -186,3 +207,4 @@
 		background: red;
 	}
 </style>
+AAAA

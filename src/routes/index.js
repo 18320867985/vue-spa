@@ -13,11 +13,16 @@ import form from "./form.js";
 		{
 			path:"/",
 			component:Layout,
+			name:"",
+			ttl:"首页",
+			icon:"el-icon-s-home",
 		//	redirect: '/basic',
 			children:[
 				{
 					path:"",
-					component:Home
+					component:Home,
+					ttl:"home",
+					
 				}
 			]
 		},
@@ -26,7 +31,9 @@ import form from "./form.js";
 		{
 			path:"/basic",
 			component:Layout,
-			redirect: '/basic/Layout',
+			ttl:"组件-Basic",
+			icon:"el-icon-s-finance",
+			//redirect: '/basic/Layout',
 			children:basic
 			
 		},
@@ -34,13 +41,18 @@ import form from "./form.js";
 		{
 			path:"/form",
 			component:Layout,
+			ttl:"form 表单",
+			icon:"el-icon-picture-outline",
 			redirect: '/form/radio',
 			children:form
 			
 		},
 		{
 			path:"/login",
+			ttl:"登录",
+			icon:"el-icon-s-home",
 			component:Login,
+			 hidden: true,
 			
 		},
 		
