@@ -173,7 +173,10 @@ td,
 th {
   padding: 0; }
 
-/*全局*/
+/*设计图width*/
+/*rem 份数*/
+/* 375/18.75 =20px=1rem */
+/*html rem比例*/
 /*设计图width*/
 /*rem 份数*/
 /* 375/18.75 =20px=1rem */
@@ -181,7 +184,7 @@ th {
 body {
   font-size: 14px;
   line-height: 1.42858;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   background: #f8f8f8;
   color: #333; }
 
@@ -190,6 +193,8 @@ body {
           box-sizing: border-box; }
 
 div,
+ul,
+li,
 article,
 aside,
 details,
@@ -347,12 +352,12 @@ a:active {
 
 a:link,
 a:visited {
-  color: #2d80f6; }
+  color: #337ab7; }
 
 a:hover,
 a:focus,
 a:active {
-  color: #0a65e6;
+  color: #286090;
   -webkit-tap-highlight-color: transparent; }
 
 /* float*/
@@ -389,7 +394,7 @@ textarea:focus {
   outline: none !important; }
 
 .text-primary {
-  color: #2d80f6; }
+  color: #337ab7; }
 
 .text-success {
   color: #5cb85c; }
@@ -398,7 +403,7 @@ textarea:focus {
   color: #5bc0de; }
 
 .text-danger {
-  color: #f05a00; }
+  color: #d9534f; }
 
 .text-warning {
   color: #f0ad4e; }
@@ -61906,7 +61911,182 @@ textarea::-moz-placeholder {
   .el-empty__bottom {
     margin-top: 20px; }
 
-/*全局*/
+.slide-fade-enter-active {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease; }
+
+.slide-fade-enter {
+  -webkit-transform: translate(10px);
+          transform: translate(10px);
+  -webkit-filter: blur(10px) opacity(0);
+          filter: blur(10px) opacity(0); }
+
+.slide-fade2-enter-active {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease; }
+
+.slide-fade2-enter {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  opacity: 0; }
+
+.complist {
+  display: none; }
+  .complist.active {
+    display: block;
+    -webkit-animation: complist-slide-in 1s ease both;
+            animation: complist-slide-in 1s ease both; }
+
+@-webkit-keyframes complist-slide-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px); }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1; } }
+
+@keyframes complist-slide-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px); }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1; } }
+
+/*设计图width*/
+/*rem 份数*/
+/* 375/18.75 =20px=1rem */
+/*html rem比例*/
+/* Element Chalk Variables */
+/* Transition
+-------------------------- */
+/* Color
+-------------------------- */
+/* 53a8ff */
+/* 66b1ff */
+/* 79bbff */
+/* 8cc5ff */
+/* a0cfff */
+/* b3d8ff */
+/* c6e2ff */
+/* d9ecff */
+/* ecf5ff */
+/* Link
+-------------------------- */
+/* Border
+-------------------------- */
+/* Fill
+-------------------------- */
+/* Typography
+-------------------------- */
+/* Size
+-------------------------- */
+/* z-index
+-------------------------- */
+/* Disable base
+-------------------------- */
+/* Icon
+-------------------------- */
+/* Checkbox
+-------------------------- */
+/* Radio
+-------------------------- */
+/* Select
+-------------------------- */
+/* Alert
+-------------------------- */
+/* MessageBox
+-------------------------- */
+/* Message
+-------------------------- */
+/* Notification
+-------------------------- */
+/* Input
+-------------------------- */
+/* Cascader
+-------------------------- */
+/* Group
+-------------------------- */
+/* Tab
+-------------------------- */
+/* Button
+-------------------------- */
+/* cascader
+-------------------------- */
+/* Switch
+-------------------------- */
+/* Dialog
+-------------------------- */
+/* Table
+-------------------------- */
+/* Pagination
+-------------------------- */
+/* Popup
+-------------------------- */
+/* Popover
+-------------------------- */
+/* Tooltip
+-------------------------- */
+/* Tag
+-------------------------- */
+/* Tree
+-------------------------- */
+/* Dropdown
+-------------------------- */
+/* Badge
+-------------------------- */
+/* Card
+--------------------------*/
+/* Slider
+--------------------------*/
+/* Steps
+--------------------------*/
+/* Menu
+--------------------------*/
+/* Rate
+--------------------------*/
+/* DatePicker
+--------------------------*/
+/* Loading
+--------------------------*/
+/* Scrollbar
+--------------------------*/
+/* Carousel
+--------------------------*/
+/* Collapse
+--------------------------*/
+/* Transfer
+--------------------------*/
+/* Header
+  --------------------------*/
+/* Footer
+--------------------------*/
+/* Main
+--------------------------*/
+/* Timeline
+--------------------------*/
+/* Backtop
+--------------------------*/
+/* Link
+--------------------------*/
+/* Calendar
+--------------------------*/
+/* Form
+-------------------------- */
+/* Avatar
+--------------------------*/
+/* Empty
+-------------------------- */
+/* Skeleton 
+--------------------------*/
+/* Svg
+--------------- */
+/* Break-point
+--------------------------*/
 html, body, #app {
   height: 100%;
   background: #fff; }
@@ -61926,7 +62106,7 @@ html, body, #app {
       -ms-flex-align: stretch;
           align-items: stretch;
   height: 100%;
-  min-width: 1024px; }
+  min-width: 1440px; }
 
 .index-h {
   line-height: 50px;
@@ -61935,7 +62115,7 @@ html, body, #app {
   font-size: 16px; }
   .index-h img {
     width: 30px;
-    margin-left: 50px;
+    margin-left: 10px;
     margin-right: 20px;
     max-height: 50px;
     vertical-align: middle; }
@@ -61958,7 +62138,10 @@ html, body, #app {
 .index-cnt-aside.el-scrollbar {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
-          flex: 0 0 auto; }
+          flex: 0 0 auto;
+  border-right: 1px solid #f2f2f2;
+  -webkit-box-shadow: 2px 0 10px rgba(0, 0, 0, 0.075);
+          box-shadow: 2px 0 10px rgba(0, 0, 0, 0.075); }
   .index-cnt-aside.el-scrollbar.open {
     width: 13% !important;
     -webkit-transition: all .5s ease;
@@ -61981,7 +62164,10 @@ html, body, #app {
     .index-aside .el-aside a {
       display: block; }
   .index-aside .el-menu {
-    margin: auto; }
+    margin: auto;
+    border-right: none; }
+  .index-aside .el-menu-item:hover {
+    background: #fefefe; }
 
 .index-main {
   -webkit-box-flex: 1;
@@ -61990,9 +62176,50 @@ html, body, #app {
   height: 100%;
   overflow-y: auto;
   background: #f8f8f8; }
+  .index-main .el-main {
+    padding-top: 50px; }
 
-.index .el-menu-item.router-link-exact-active.is-active {
-  font-size: 16px; }
+.index-main-nav {
+  position: fixed;
+  top: 50px;
+  padding-left: 10px;
+  width: 100%;
+  z-index: 999;
+  white-space: nowrap;
+  font-size: 0;
+  text-align: left;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075);
+  background: #fff; }
+  .index-main-nav:hover {
+    cursor: pointer; }
+  .index-main-nav li {
+    position: relative;
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle; }
+  .index-main-nav .li-link {
+    padding: 8px  15px; }
+    .index-main-nav .li-link:hover {
+      color: #337ab7; }
+    .index-main-nav .li-link:nth-last-of-type(1) {
+      color: #999;
+      cursor: default; }
+    .index-main-nav .li-link:nth-last-of-type(1):hover {
+      color: #999; }
+  .index-main-nav .li-link + .li-link::before {
+    position: absolute;
+    top: 14px;
+    margin-left: -15px;
+    content: "";
+    display: inline-block;
+    height: 8px;
+    border-left: 1px solid #ccc;
+    -webkit-transform: rotate(25deg);
+            transform: rotate(25deg);
+    vertical-align: middle; }
+  .index-main-nav i {
+    vertical-align: middle; }
 
 .index .el-submenu {
   color: #111;
@@ -62011,10 +62238,142 @@ html, body, #app {
 .index .el-menu-item-group__title {
   padding: 0; }
 
+.index .el-message-box__message p {
+  color: #444 !important; }
+
 .el-link + .el-link {
   margin-left: 10px; }
 
-/*全局*/
+/*设计图width*/
+/*rem 份数*/
+/* 375/18.75 =20px=1rem */
+/*html rem比例*/
+/* Element Chalk Variables */
+/* Transition
+-------------------------- */
+/* Color
+-------------------------- */
+/* 53a8ff */
+/* 66b1ff */
+/* 79bbff */
+/* 8cc5ff */
+/* a0cfff */
+/* b3d8ff */
+/* c6e2ff */
+/* d9ecff */
+/* ecf5ff */
+/* Link
+-------------------------- */
+/* Border
+-------------------------- */
+/* Fill
+-------------------------- */
+/* Typography
+-------------------------- */
+/* Size
+-------------------------- */
+/* z-index
+-------------------------- */
+/* Disable base
+-------------------------- */
+/* Icon
+-------------------------- */
+/* Checkbox
+-------------------------- */
+/* Radio
+-------------------------- */
+/* Select
+-------------------------- */
+/* Alert
+-------------------------- */
+/* MessageBox
+-------------------------- */
+/* Message
+-------------------------- */
+/* Notification
+-------------------------- */
+/* Input
+-------------------------- */
+/* Cascader
+-------------------------- */
+/* Group
+-------------------------- */
+/* Tab
+-------------------------- */
+/* Button
+-------------------------- */
+/* cascader
+-------------------------- */
+/* Switch
+-------------------------- */
+/* Dialog
+-------------------------- */
+/* Table
+-------------------------- */
+/* Pagination
+-------------------------- */
+/* Popup
+-------------------------- */
+/* Popover
+-------------------------- */
+/* Tooltip
+-------------------------- */
+/* Tag
+-------------------------- */
+/* Tree
+-------------------------- */
+/* Dropdown
+-------------------------- */
+/* Badge
+-------------------------- */
+/* Card
+--------------------------*/
+/* Slider
+--------------------------*/
+/* Steps
+--------------------------*/
+/* Menu
+--------------------------*/
+/* Rate
+--------------------------*/
+/* DatePicker
+--------------------------*/
+/* Loading
+--------------------------*/
+/* Scrollbar
+--------------------------*/
+/* Carousel
+--------------------------*/
+/* Collapse
+--------------------------*/
+/* Transfer
+--------------------------*/
+/* Header
+  --------------------------*/
+/* Footer
+--------------------------*/
+/* Main
+--------------------------*/
+/* Timeline
+--------------------------*/
+/* Backtop
+--------------------------*/
+/* Link
+--------------------------*/
+/* Calendar
+--------------------------*/
+/* Form
+-------------------------- */
+/* Avatar
+--------------------------*/
+/* Empty
+-------------------------- */
+/* Skeleton 
+--------------------------*/
+/* Svg
+--------------- */
+/* Break-point
+--------------------------*/
 /*登录*/
 .login-hd {
   border-bottom: 1px solid #f2f2f2;
@@ -62029,12 +62388,12 @@ html, body, #app {
     float: left;
     line-height: 66px;
     font-size: 0;
-    margin-right: 50px; }
+    margin-right: 20px; }
     .login-hd-logo a span {
       position: absolute;
       clip: rect(0, 0, 0, 0); }
     .login-hd-logo a img {
-      width: 40px;
+      width: 30px;
       vertical-align: middle; }
   .login-hd-logo span.txt {
     display: inline-block;
@@ -62052,7 +62411,7 @@ html, body, #app {
   .login-cnt-tip .iconfont {
     font-size: 20px;
     vertical-align: middle;
-    color: #f05a00; }
+    color: #d9534f; }
 
 .login-cnt-slide {
   height: 470px; }
@@ -62221,7 +62580,7 @@ html, body, #app {
   background: #2d50d1; }
   .login-cnt-form .login-error {
     margin-bottom: 5px;
-    color: #f05a00; }
+    color: #d9534f; }
   .login-cnt-form ._pwr {
     position: absolute;
     z-index: 999;
@@ -62257,7 +62616,7 @@ html, body, #app {
       font-size: 16px;
       font-weight: bold; }
       .login-cnt-form ._item-tab-ttl li.active {
-        color: #f05a00; }
+        color: #d9534f; }
       .login-cnt-form ._item-tab-ttl li:hover {
         cursor: pointer; }
   .login-cnt-form ._item-tab-cnt {
@@ -62277,7 +62636,7 @@ html, body, #app {
       -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
               box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
       .login-cnt-form ._item-tab-cnt-item .__item input:focus {
-        border: 1px solid #2d80f6 !important; }
+        border: 1px solid #337ab7 !important; }
     .login-cnt-form ._item-tab-cnt-item .__item + .__item {
       margin-top: 20px; }
     .login-cnt-form ._item-tab-cnt-item .__item .__pwdlink {
@@ -62285,7 +62644,7 @@ html, body, #app {
       .login-cnt-form ._item-tab-cnt-item .__item .__pwdlink:hover {
         color: #003399; }
     .login-cnt-form ._item-tab-cnt-item .__item .__reg {
-      color: #2d80f6; }
+      color: #337ab7; }
     .login-cnt-form ._item-tab-cnt-item .__item .__btn {
       line-height: 36px;
       display: block;
@@ -62307,7 +62666,7 @@ html, body, #app {
       background: transparent;
       cursor: default; }
       .login-cnt-form ._item-tab-cnt-item .__item.__yzm .__yzm-btn.active2 {
-        color: #2d80f6;
+        color: #337ab7;
         cursor: pointer; }
 
 .v-tab-cnt-item {
@@ -62374,5 +62733,345 @@ html, body, #app {
     font-size: 14px;
     text-transform: lowercase; }
 
-.el-message-box__message {
-  color: #f05a00; }
+/*设计图width*/
+/*rem 份数*/
+/* 375/18.75 =20px=1rem */
+/*html rem比例*/
+/* Element Chalk Variables */
+/* Transition
+-------------------------- */
+/* Color
+-------------------------- */
+/* 53a8ff */
+/* 66b1ff */
+/* 79bbff */
+/* 8cc5ff */
+/* a0cfff */
+/* b3d8ff */
+/* c6e2ff */
+/* d9ecff */
+/* ecf5ff */
+/* Link
+-------------------------- */
+/* Border
+-------------------------- */
+/* Fill
+-------------------------- */
+/* Typography
+-------------------------- */
+/* Size
+-------------------------- */
+/* z-index
+-------------------------- */
+/* Disable base
+-------------------------- */
+/* Icon
+-------------------------- */
+/* Checkbox
+-------------------------- */
+/* Radio
+-------------------------- */
+/* Select
+-------------------------- */
+/* Alert
+-------------------------- */
+/* MessageBox
+-------------------------- */
+/* Message
+-------------------------- */
+/* Notification
+-------------------------- */
+/* Input
+-------------------------- */
+/* Cascader
+-------------------------- */
+/* Group
+-------------------------- */
+/* Tab
+-------------------------- */
+/* Button
+-------------------------- */
+/* cascader
+-------------------------- */
+/* Switch
+-------------------------- */
+/* Dialog
+-------------------------- */
+/* Table
+-------------------------- */
+/* Pagination
+-------------------------- */
+/* Popup
+-------------------------- */
+/* Popover
+-------------------------- */
+/* Tooltip
+-------------------------- */
+/* Tag
+-------------------------- */
+/* Tree
+-------------------------- */
+/* Dropdown
+-------------------------- */
+/* Badge
+-------------------------- */
+/* Card
+--------------------------*/
+/* Slider
+--------------------------*/
+/* Steps
+--------------------------*/
+/* Menu
+--------------------------*/
+/* Rate
+--------------------------*/
+/* DatePicker
+--------------------------*/
+/* Loading
+--------------------------*/
+/* Scrollbar
+--------------------------*/
+/* Carousel
+--------------------------*/
+/* Collapse
+--------------------------*/
+/* Transfer
+--------------------------*/
+/* Header
+  --------------------------*/
+/* Footer
+--------------------------*/
+/* Main
+--------------------------*/
+/* Timeline
+--------------------------*/
+/* Backtop
+--------------------------*/
+/* Link
+--------------------------*/
+/* Calendar
+--------------------------*/
+/* Form
+-------------------------- */
+/* Avatar
+--------------------------*/
+/* Empty
+-------------------------- */
+/* Skeleton 
+--------------------------*/
+/* Svg
+--------------- */
+/* Break-point
+--------------------------*/
+.upgoods .form-inline .el-input {
+  max-width: 150px; }
+
+.upgoods .cell {
+  text-align: center; }
+
+.upgoods .upgoods-page {
+  margin-top: 20px;
+  text-align: center; }
+  .upgoods .upgoods-page .el-pagination__total {
+    margin: 0 10px 0 20px; }
+
+/*设计图width*/
+/*rem 份数*/
+/* 375/18.75 =20px=1rem */
+/*html rem比例*/
+/* Element Chalk Variables */
+/* Transition
+-------------------------- */
+/* Color
+-------------------------- */
+/* 53a8ff */
+/* 66b1ff */
+/* 79bbff */
+/* 8cc5ff */
+/* a0cfff */
+/* b3d8ff */
+/* c6e2ff */
+/* d9ecff */
+/* ecf5ff */
+/* Link
+-------------------------- */
+/* Border
+-------------------------- */
+/* Fill
+-------------------------- */
+/* Typography
+-------------------------- */
+/* Size
+-------------------------- */
+/* z-index
+-------------------------- */
+/* Disable base
+-------------------------- */
+/* Icon
+-------------------------- */
+/* Checkbox
+-------------------------- */
+/* Radio
+-------------------------- */
+/* Select
+-------------------------- */
+/* Alert
+-------------------------- */
+/* MessageBox
+-------------------------- */
+/* Message
+-------------------------- */
+/* Notification
+-------------------------- */
+/* Input
+-------------------------- */
+/* Cascader
+-------------------------- */
+/* Group
+-------------------------- */
+/* Tab
+-------------------------- */
+/* Button
+-------------------------- */
+/* cascader
+-------------------------- */
+/* Switch
+-------------------------- */
+/* Dialog
+-------------------------- */
+/* Table
+-------------------------- */
+/* Pagination
+-------------------------- */
+/* Popup
+-------------------------- */
+/* Popover
+-------------------------- */
+/* Tooltip
+-------------------------- */
+/* Tag
+-------------------------- */
+/* Tree
+-------------------------- */
+/* Dropdown
+-------------------------- */
+/* Badge
+-------------------------- */
+/* Card
+--------------------------*/
+/* Slider
+--------------------------*/
+/* Steps
+--------------------------*/
+/* Menu
+--------------------------*/
+/* Rate
+--------------------------*/
+/* DatePicker
+--------------------------*/
+/* Loading
+--------------------------*/
+/* Scrollbar
+--------------------------*/
+/* Carousel
+--------------------------*/
+/* Collapse
+--------------------------*/
+/* Transfer
+--------------------------*/
+/* Header
+  --------------------------*/
+/* Footer
+--------------------------*/
+/* Main
+--------------------------*/
+/* Timeline
+--------------------------*/
+/* Backtop
+--------------------------*/
+/* Link
+--------------------------*/
+/* Calendar
+--------------------------*/
+/* Form
+-------------------------- */
+/* Avatar
+--------------------------*/
+/* Empty
+-------------------------- */
+/* Skeleton 
+--------------------------*/
+/* Svg
+--------------- */
+/* Break-point
+--------------------------*/
+.account .form-inline .el-input {
+  max-width: 150px; }
+
+.account .cell {
+  text-align: center; }
+
+.account .upgoods-page {
+  margin-top: 20px;
+  text-align: center; }
+  .account .upgoods-page .el-pagination__total {
+    margin: 0 10px 0 20px; }
+
+.account .el-dialog {
+  width: 700px; }
+  .account .el-dialog ul {
+    margin-top: -30px; }
+    .account .el-dialog ul li {
+      padding: 15px 5px 10px; }
+      .account .el-dialog ul li label {
+        display: inline-block;
+        min-width: 120px;
+        text-align: left;
+        color: #333; }
+      .account .el-dialog ul li > span {
+        color: #777; }
+      .account .el-dialog ul li ._tip {
+        position: absolute;
+        margin-left: 5px;
+        white-space: nowrap;
+        color: #999;
+        font-size: 12px; }
+    .account .el-dialog ul li + li {
+      border-top: 1px solid #f2f2f2; }
+  .account .el-dialog .el-dialog__title {
+    color: #337ab7; }
+  .account .el-dialog ul._edit {
+    margin-bottom: -40px; }
+  .account .el-dialog textarea {
+    min-height: 100px;
+    max-height: 120px; }
+
+ul.account-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+  background: #f2f2f2;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.075);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.075); }
+  ul.account-bar li {
+    padding: 0 25px;
+    line-height: 45px;
+    color: #666; }
+    ul.account-bar li:hover {
+      cursor: pointer; }
+    ul.account-bar li.active, ul.account-bar li.router-link-exact-active.router-link-active {
+      background-color: rgba(64, 158, 255, 0.7);
+      color: #fff; }
+
+.recharge .form-inline .el-input {
+  max-width: 150px; }
+
+.recharge .el-form.form-inline {
+  width: 1060px; }

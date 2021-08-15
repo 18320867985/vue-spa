@@ -1,5 +1,5 @@
 
-@import "../common/var-pc.scss";
+@import "../../element-scss/common/var.scss";
 
 /*登录*/
 
@@ -13,12 +13,11 @@
     height: 66px;
 
     a {
-        display: block;
-       
+        display: block;    
         float: left;
         line-height: 66px;
         font-size: 0;
-		margin-right: 50px;
+		margin-right: 20px;
 
         span {
             position: absolute;
@@ -26,7 +25,7 @@
         }
 
         img {
-            width: 40px;  
+            width: 30px;  
             vertical-align: middle;
         }
     }
@@ -461,7 +460,4 @@
 }
 
 
-// 
-.el-message-box__message{
-	color:$text-danger;
-}
+

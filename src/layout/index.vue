@@ -3,44 +3,60 @@
 	<el-container class="index" ref="index">
 		<el-header class="index-h">
 			<div>
-				<i class="index-h-icon " @click="isCollapse=!isCollapse" :class="isCollapse?'el-icon-s-unfold ':'el-icon-s-fold'"></i>
 				<div class="fr">
-					  <el-button size="small" @click="centerDialogVisible = true"  round>退出登录</el-button>
+					<el-button size="small" @click="logout" round>退出登录</el-button>
 				</div>
-				<img src="../assets/logo.png" alt="Alternate Text" />
-				结算中心-管理系统  
+				<img src="../assets/vue.png" alt="Alternate Text" />
+				结算系统后台
 			</div>
 		</el-header>
+
 		<el-container class="index-cnt">
 			<el-scrollbar wrap-class="scrollbar-wrapper" class="index-cnt-aside " :class="{'open':!isCollapse}">
-				<el-aside class="index-aside"  :class="{'open':!isCollapse}">
+				<el-aside class="index-aside" :class="{'open':!isCollapse}">
+
 					<!--导航菜单-->
-					<el-menu :default-active="$route.path" :collapse="isCollapse" >
-							<el-submenu v-for="(item,index) in $router.options.routes" :index="index+''"  :key="index"  :hidden="item.hidden" >
-								<template slot="title"><i :class="item.icon"></i> <span slot="title">{{item.ttl}} </span> </template>
-								
-								<el-menu-item-group  >
-														
-									<router-link :index="index+'-'+index2" class=" el-menu-item" :to="child.path?item.path+'/'+child.path:item.path" active-class="is-active"  v-for="(child,index2) in item.children"  :key="child.path" tag="li"
-										exact>
-											{{child.ttl}}
-									</router-link>
-									
-								</el-menu-item-group>
-							
-							</el-submenu>
-						
+					<el-menu :default-active="$route.path" :collapse="isCollapse"  router >
+						<el-submenu v-for="(item,index) in activePaths" :index="(index++)+''" :key="index">
+							<template slot="title"><i :class="item.meta&&item.meta.icon"></i> <span slot="title">{{item.meta&&item.meta.ttl}} </span>
+							</template>
+							<el-menu-item-group>
+								<router-link :index="index+'-'+index2" class=" el-menu-item"
+									:to="child.path?item.path+'/'+child.path:item.path" active-class="is-active"
+									v-for="(child,index2) in item.children" :key="child.path" tag="li" exact :hidden="child.hidden">
+									{{child.meta&&child.meta.ttl}}
+								</router-link>
+							</el-menu-item-group>
+						</el-submenu>
 					</el-menu>
-			
+
 				</el-aside>
 			</el-scrollbar>
+
 			<div class="index-main">
-				<el-main>
+				<el-main class="column">
+					<!-- <el-breadcrumb class="flex" separator="/">
+						<i style="margin-right: 12px;" @click="isCollapse=!isCollapse" :class="isCollapse?'el-icon-s-unfold ':'el-icon-s-fold'"></i>
+						<template v-for="(item,index) in navbars">
+							<el-breadcrumb-item :to="{ path: item.path }" :key="index">{{item.meta.ttl}}</el-breadcrumb-item>
+						</template>
+					</el-breadcrumb> -->
+				<!-- 	<div style="height:50px;"></div> -->
+
+				<!-- 导航条 -->
+				<ul class="index-main-nav">
+					<li><i class="index-h-icon " @click="isCollapse=!isCollapse"
+					:class="isCollapse?'el-icon-s-unfold ':'el-icon-s-fold'"></i>
+					</li>	
+					<router-link  class="li-link" tag="li" v-for="(item,index) in navbars" :key="index" :to="''+item.path">{{item.meta.ttl}}</router-link> 
+				</ul>
+
+			
+					<!-- 路由页 -->
 					<transition name="slide-fade">
-						
 						<router-view></router-view>
 					</transition>
-
+					
 					<el-dialog title="提示" :visible.sync="centerDialogVisible" width="30%" size="small">
 						<span>确定退出登录?</span>
 						<span slot="footer" class="dialog-footer">
@@ -49,6 +65,7 @@
 						</span>
 					</el-dialog>
 				</el-main>
+
 			</div>
 
 		</el-container>
@@ -62,27 +79,46 @@
 			return {
 				admin: "admin",
 				centerDialogVisible: false,
-				isCollapse:false
+				isCollapse: false,
+				navbars: []
 			}
 		},
 		methods: {
 			logout() {
-				console.log("logout")
-				this.$router.push("/login")
+				this.$confirm(' 是否退出登录?', '提示', {
+					confirmButtonText: '确定',
+					cancelButtonText: '取消',
+					type: 'warning'
+				}).then(() => {
+					this.$router.push("/login");
+				})
+				
 			},
-
+			// 设置动态导航条
+			getnavbars() {
+				this.navbars = this.$route.matched.filter(item => item.meta && item.meta.ttl);
+			},
 		},
-
+		computed: {
+			activePaths() {
+				return this.$router.options.routes.filter(item => !item.hidden);
+			}
+		},
+		watch: {
+			$route() {
+				this.getnavbars();
+			}
+		},
+		created() {
+			this.getnavbars();
+		},
 		mounted() {
-
-console.log("$router.options.routes",this.$router.options.routes)
 			// 设置 iframe 高度
 			var $el = document.querySelector(".index");
 			resetWidth();
 			window.onresize = function() {
 				resetWidth();
 			}
-
 			function resetWidth() {
 				var win_h = $el.offsetHeight;
 				var h_w = $el.querySelector(".index-h").offsetHeight;
@@ -92,19 +128,31 @@ console.log("$router.options.routes",this.$router.options.routes)
 	}
 </script>
 
-<style scoped="scoped">
-	.slide-fade-enter-active {
-		transition: all 1s ease;
-	}
+<style lang="scss" scoped>
+	
+	/* 内容主体 */
+	// .el-main {
+	// 	padding: 0 12px;
+	// 	box-sizing: border-box;
+	// 	width: 100%;
+	// 	margin: 0;
+	// 	overflow: hidden;
+	// 	position: relative;
+	// 	height: 100%;
+	// }
 
-	.slide-fade-enter {
-		transform: translate(20px);
-		filter: blur(10px) opacity(0);
-
-	}
-
-	..el-scrollbar__wrap {
-		background: red;
-	}
+	// /* 面包屑 */
+	// .el-breadcrumb {
+	// 	background: #fff;
+	// 	padding: 0 12px;
+	// 	border-radius: 4px;
+	// 	width: calc(100% - 24px);
+	// 	position: absolute;
+	// 	margin: 0 12px;
+	// 	top: 1px;
+	// 	left: 0;
+	// 	z-index: 999;
+	// 	height: 48px;
+	// 	line-height: 48px;
+	// }
 </style>
-AAAA

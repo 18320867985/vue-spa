@@ -6,7 +6,7 @@
 		        <!--左边logo-->
 		        <h1 class="login-hd-logo ">
 		            <a href="">
-		               <img src="../assets/logo.png" alt="home logo" />
+		               <img src="../assets/vue.png" alt="home logo" />
 		                <span>	                   
 		                    www.xxxx.com
 		                </span>
@@ -199,20 +199,8 @@
 		},
 		methods:{
 			loginBtn(){
-			console.log(this.userName+this.password)
-			this.$router.push("/");
-				// if(this.userName.trim()==="admin"&&this.password.trim()==="123456"){
-				// 	this.$router.push("/");
-				// }else{
-				// 	let errMsg="";
-				// 	if(this.password==""){errMsg="密码不能为空！";}
-				// 	if(this.userName==""){errMsg="用户名不能为空！";}
-				// 	if(this.password!=""&&this.userName!=""){errMsg="用户名与密码不匹配！";}
-					
-				// 	 this.$alert(errMsg, '账号登录', {
-				// 	          confirmButtonText: '确定'	         
-				// 	});
-				// }
+				console.log(this.userName+this.password)
+				this.$router.push("/");
 			}
 		}
 	}

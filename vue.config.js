@@ -7,8 +7,9 @@ module.exports = {
     port: 8080,
     proxy: {
       // 跨域
-      '/': { 
-        target: 'http://192.168.1.14:60002',
+      '/': { // 金融
+      //  target: 'http://192.168.1.226:60002',
+	   target: 'http://47.119.141.27:60089/',
         changOrigin: true,  // 开启跨域
         ws: true,
         pathRewrite: {
@@ -16,6 +17,6 @@ module.exports = {
         },
       },
     },
-    before: app => {}
+    //before: app => {}
   }
 }

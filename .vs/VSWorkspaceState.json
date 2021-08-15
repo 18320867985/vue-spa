@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src"
+    "\\src",
+    "\\src\\api",
+    "\\src\\mixins"
   ],
-  "SelectedNode": "\\src",
+  "SelectedNode": "\\src\\api\\instance .js",
   "PreviewInSolutionExplorer": false
 }

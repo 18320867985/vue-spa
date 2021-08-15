@@ -1,15 +1,15 @@
 
-import axios from "./axios.js";
-
-
-const getUserInfo=(params)=>{
-	axios.get("/userInfo",params).then(res=>{
-		console.log(res)
-	}).catch(err=>{
-		console.log(err)
-	});
-};
+// 模块
+import account  from "./account";
+import recharge  from "./recharge";
+import drawRecord  from "./drawRecord";
+import upgoods  from "./upgoods";
+import flowrecord  from "./flowrecord";
 
 export default{
-	getUserInfo
+	...account,
+	...recharge,
+	...drawRecord,
+	...upgoods,
+	...flowrecord
 }
