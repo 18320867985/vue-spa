@@ -5,11 +5,9 @@ Vue.use(ElementUI, { size: 'small', zIndex: 3000 });
 import router from "./routes";
 import store from "./store"
 
-import api from "./api/api.js";
+import api from "./api/index.js";
 Vue.prototype.$api = api;
 
-import axios from "./api/index.js";
-Vue.prototype.$axios = axios;
 import App from './App.vue';
 Vue.config.productionTip = false
 

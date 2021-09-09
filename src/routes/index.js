@@ -93,7 +93,7 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
 const createRouter = () => new VueRouter({
-	mode: 'hash', // require service support
+	mode: 'history', // require service support
 	scrollBehavior: () => ({ y: 0 }),
 	routes
 })
